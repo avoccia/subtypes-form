@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,900" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <title>EE Part Subtypes</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 class="name">EE Part Subtypes</h1>
+    </div>
+
+    <div class="container">
+      <form action="index.html" method="POST">
+        <div class="subtype">
+          <fieldset class="form-fieldset">
+            <legend class="form-title">Select Part Subtype</legend>
+              <div class="form-row">
+                <label for="subtype">Subtype</label>
+                <select class="form-input" id="subtype" name="user_subtype">
+                  <option value="" disabled selected hidden>Choose Subtype</option>
+                  <option value="capacitor">Capacitor</option>
+                  <option value="connector">Connector</option>
+                  <option value="crystals">Crystals & OSC</option>
+                  <option value="diode">Diode</option>
+                  <option value="elect-misc">Electrical Miscellaneous</option>
+                  <option value="ferrite">Ferrite Bead</option>
+                  <option value="filter">Filter</option>
+                  <option value="inductor">Inductor</option>
+                  <option value="integrated">Integrated Circuit</option>
+                  <option value="led">LED</option>
+                  <option value="metal">Metal</option>
+                  <option value="microphone">Microphone</option>
+                  <option value="motor">Motor</option>
+                  <option value="resistor">Resistor</option>
+                  <option value="sensor">Sensor</option>
+                  <option value="switch">Switch</option>
+                  <option value="transistor">Transistor</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset class="form-fieldset attr">
+              <legend class="form-title">Subtype Attributes</legend>
+              <div class="form-row attr-input case-size">
+                <label for="case-size">Case Size</label>
+                <input class="form-input" type="text" id="case-size" name="subtype_case-size">
+              </div>
+              <div class="form-row attr-input circuit">
+                <label for="circuit">Circuit</label>
+                <input class="form-input" type="text" id="circuit" name="subtype_circuit" placeholder="Required">
+              </div>
+              <div class="form-row attr-input color">
+                <label for="color">Color</label>
+                <input class="form-input" type="text" id="color" name="subtype_color" placeholder="Required">
+              </div>
+              <div class="form-row attr-input current-rating">
+                <label for="current-rating">Current Rating</label>
+                <input class="form-input" type="text" id="current-rating" name="subtype_current-rating" placeholder="Required">
+              </div>
+              <div class="form-row attr-input digiKey-PN">
+                <label for="digiKey-PN">DigiKey PN</label>
+                <input class="form-input" type="text" id="digiKey-PN" name="subtype_digiKey-PN">
+              </div>
+              <div class="form-row attr-input dimension">
+                <label for="dimension">Dimension</label>
+                <input class="form-input" type="text" id="dimension" name="subtype_dimension">
+              </div>
+              <div class="form-row attr-input diode-type">
+                <label for="diode-type">Diode Type</label>
+                <input class="form-input" type="text" id="diode-type" name="subtype_diode-type" placeholder="Required">
+              </div>
+              <div class="form-row attr-input ee-description">
+                <label for="ee-description">EE Description</label>
+                <input class="form-input" type="text" id="ee-description" name="subtype_ee-description" placeholder="Required">
+              </div>
+              <div class="form-row attr-input equivalent-allowed">
+                <label for="equivalent-allowed">Equivalent Allowed</label>
+                <input class="form-input" type="text" id="equivalent-allowed" name="subtype_equivalent-allowed" placeholder="Required">
+              </div>
+              <div class="form-row attr-input filter-type">
+                <label for="filter-type">Filter Type</label>
+                <input class="form-input" type="text" id="filter-type" name="subtype_filter-type" placeholder="Required">
+              </div>
+              <div class="form-row attr-input esr">
+                <label for="esr">ESR</label>
+                <input class="form-input" type="text" id="esr" name="subtype_esr">
+              </div>
+              <div class="form-row attr-input self-resonant">
+                <label for="self-resonant">Frequently Self Resonant</label>
+                <input class="form-input" type="text" id="self-resonant" name="subtype_self-resonant" placeholder="Required">
+              </div>
+              <div class="form-row attr-input gender">
+                <label for="gender">Gender</label>
+                <input class="form-input" type="text" id="gender" name="subtype_gender" placeholder="Required">
+              </div>
+              <div class="form-row attr-input height">
+                <label for="height">Height</label>
+                <input class="form-input" type="text" id="height" name="subtype_height" placeholder="Required">
+              </div>
+              <div class="form-row attr-input material-core">
+                <label for="material-core">Material Core</label>
+                <input class="form-input" type="text" id="material-core" name="subtype_material-core" placeholder="Required">
+              </div>
+              <div class="form-row attr-input millicandela-rating">
+                <label for="millicandela-rating">Millicandela Rating</label>
+                <input class="form-input" type="text" id="millicandela-rating" name="subtype_millicandela-rating" placeholder="Required">
+              </div>
+              <div class="form-row attr-input mounting-type">
+                <label for="mounting-type">Mounting Type</label>
+                <input class="form-input" type="text" id="mounting-type" name="subtype_mounting-type" placeholder="Required">
+              </div>
+              <div class="form-row attr-input operating-temp">
+                <label for="operating-temp">Operating Temperature</label>
+                <input class="form-input" type="text" id="operating-temp" name="subtype_operating-temp">
+              </div>
+              <div class="form-row attr-input package">
+                <label for="package">Package</label>
+                <input class="form-input" type="text" id="package" name="subtype_package" placeholder="Required">
+              </div>
+              <div class="form-row attr-input packaging">
+                <label for="packaging">Packaging</label>
+                <input class="form-input" type="text" id="packaging" name="subtype_packaging">
+              </div>
+              <div class="form-row attr-input q-at-freq">
+                <label for="q-at-freq">Q AT FREQ</label>
+                <input class="form-input" type="text" id="q-at-freq" name="subtype_q-at-freq">
+              </div>
+              <div class="form-row attr-input supplier-device">
+                <label for="supplier-device">Supler Device Package</label>
+                <input class="form-input" type="text" id="supplier-device" name="subtype_suppler-device">
+              </div>
+              <div class="form-row attr-input series">
+                <label for="series">Series</label>
+                <input class="form-input" type="text" id="series" name="subtype_series">
+              </div>
+              <div class="form-row attr-input switch-function">
+                <label for="switch-function">Switch Function</label>
+                <input class="form-input" type="text" id="switch-function" name="subtype_switch-function" placeholder="Required">
+              </div>
+              <div class="form-row attr-input temp-coefficient">
+                <label for="temp-coefficient">Temperature Coefficient</label>
+                <input class="form-input" type="text" id="temp-coefficient" name="subtype_temp-coefficient" placeholder="Required">
+              </div>
+              <div class="form-row attr-input tolerance">
+                <label for="tolerance">Tolerance</label>
+                <input class="form-input" type="text" id="tolerance" name="subtype_tolerance" placeholder="Required">
+              </div>
+              <div class="form-row attr-input ee-type">
+                <label for="ee-type">Type (EE_Type)</label>
+                <input class="form-input" type="text" id="ee-type" name="subtype_ee-type" placeholder="Required">
+              </div>
+              <div class="form-row attr-input value">
+                <label for="value">Value</label>
+                <input class="form-input" type="text" id="value" name="subtype_value" placeholder="Required">
+              </div>
+              <div class="form-row attr-input voltage">
+                <label for="voltage">Voltage</label>
+                <input class="form-input" type="text" id="voltage" name="subtype_voltage" placeholder="Required">
+              </div>
+              <div class="form-row attr-input voltage-forward">
+                <label for="voltage-forward">Voltage Forward</label>
+                <input class="form-input" type="text" id="voltage-forward" name="subtype_voltage-forward" placeholder="Required">
+              </div>
+              <div class="form-row attr-input watts">
+                <label for="watts">Watts</label>
+                <input class="form-input" type="text" id="watts" name="subtype_watts" placeholder="Required">
+              </div>
+              <div class="form-row attr-input viewing-angle">
+                <label for="viewing-angle">Viewing Angle</label>
+                <input class="form-input" type="text" id="viewing-angle" name="subtype_viewing-angle">
+              </div>
+            </fieldset>
+          </div>
+          <input class="btn default" type="submit" value="SUBMIT">
+        </form>
+
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
