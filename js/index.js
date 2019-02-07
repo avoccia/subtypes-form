@@ -4,88 +4,103 @@ $('#subtype').on('change', function () {
 
   // UNIVERSAL OPTIONS
   if (selection !== '') {
-    $('.attr, .digiKey-PN, .ee-description, .equivalent-allowed, .height').css('display', 'flex');
-    $('input[name="subtype_ee-description"], input[name="subtype_height"]').attr("required", true);
+    $('.attr, .digiKey-PN, .ee-description, .equivalent-allowed, .height, .number, .sub-name, .material-group, .state, .version, .organization-name').css('display', 'flex');
+    $('input[name="ee-description"], input[name="height"], input[name="number"], input[name="name"], input[name="extended-material-group"], input[name="state"], input[name="version"], input[name="organization-name"]').attr("required", true);
   }
 
   // CAPACITOR ONLY OPTIONS
   if (selection === 'capacitor') {
     $('.case-size, .dimension, .esr, .operating-temp, .series, .temp-coefficient, .voltage').css('display', 'flex');
-    $('input[name="subtype_temp-coefficient"], input[name="subtype_voltage"]').attr("required", true);
+    $('input[name="temp-coefficient"], input[name="voltage"]').attr("required", true);
+    $('input[name="case-size"], input[name="dimension"], input[name="esr"], input[name="operating-temp"], input[name="series"], input[name="temp-coefficient"], input[name="voltage"]').attr("disabled", false);
   } else {
-    $('.case-size, .dimension, .esr, operating-temp, .series, .temp-coefficient, .voltage').css('display', 'none');
-    $('input[name="subtype_temp-coefficient"], input[name="subtype_voltage"]').removeAttr("required");
-    
+    $('.case-size, .dimension, .esr, .operating-temp, .series, .temp-coefficient, .voltage').css('display', 'none');
+    $('input[name="temp-coefficient"], input[name="voltage"]').removeAttr("required");
+    $('input[name="case-size"], input[name="dimension"], input[name="esr"], input[name="operating-temp"], input[name="series"], input[name="temp-coefficient"], input[name="voltage"]').attr("disabled", true);
   }
 
   // CONNECTOR ONLY OPTIONS
   if (selection === 'connector') {
     $('.gender').css('display', 'flex');
-    $('input[name="subtype_gender"]').attr("required", true);
+    $('input[name="gender"]').attr("required", true);
+    $('input[name="gender"]').attr("disabled", false);
   } else {
     $('.gender').css('display', 'none');
-    $('input[name="subtype_gender"]').removeAttr("required");
+    $('input[name="gender"]').removeAttr("required");
+    $('input[name="gender"]').attr("disabled", true);
   }
 
   // SWITCH ONLY OPTIONS
   if (selection === 'switch') {
     $('.circuit, .switch-function').css('display', 'flex');
-    $('input[name="subtype_circuit"], input[name="subtype_switch-function"]').attr("required", true);
+    $('input[name="circuit"], input[name="switch-function"]').attr("required", true);
+    $('input[name="circuit"], input[name="switch-function"]').attr("disabled", false);
   } else {
     $('.circuit, .switch-function').css('display', 'none');
-    $('input[name="subtype_circuit"], input[name="subtype_switch-function"]').removeAttr("required");
+    $('input[name="circuit"], input[name="switch-function"]').removeAttr("required");
+    $('input[name="circuit"], input[name="switch-function"]').attr("disabled", true);
   }
 
     // LED ONLY OPTIONS
     if (selection === 'led') {
       $('.color, .millicandela-rating, .viewing-angle, .voltage-forward').css('display', 'flex');
-      $('input[name="subtype_color"], input[name="subtype_millcandela-rating"], input[name="subtype_viewing-angle"], input[name="subtype_voltage-forward"]').attr("required", true);
+      $('input[name="color"], input[name="millcandela-rating"], input[name="viewing-angle"], input[name="voltage-forward"]').attr("required", true);
+      $('input[name="color"], input[name="millicandela-rating"], input[name="viewing-angle"], input[name="voltage-forward"]').attr("disabled", false);
     } else {
       $('.color, .millicandela-rating, .viewing-angle, .voltage-forward').css('display', 'none');
-      $('input[name="subtype_color"], input[name="subtype_millcandela-rating"], input[name="subtype_viewing-angle"], input[name="subtype_voltage-forward"]').removeAttr("required");
+      $('input[name="color"], input[name="millicandela-rating"], input[name="viewing-angle"], input[name="voltage-forward"]').removeAttr("required");
+      $('input[name="color"], input[name="millicandela-rating"], input[name="viewing-angle"], input[name="voltage-forward"]').attr("disabled", true);
     }
 
     // INDUCTOR ONLY OPTIONS
     if (selection === 'inductor') {
       $('.current-rating, .self-resonant, .material-core, .q-at-freq').css('display', 'flex');
-      $('input[name="subtype_current-rating"], input[name="subtype_self-resonant"], input[name="subtype_material-core"]').attr("required", true);
+      $('input[name="current-rating"], input[name="self-resonant"], input[name="material-core"]').attr("required", true);
+      $('input[name="current-rating"], input[name="self-resonant"], input[name="material-core"], input[name="q-at-freq"]').attr("disabled", false);
     } else {
       $('.current-rating, .self-resonant, .material-core, .q-at-freq').css('display', 'none');
-      $('input[name="subtype_current-rating"]').removeAttr("required");
+      $('input[name="current-rating"]').removeAttr("required");
+      $('input[name="current-rating"], input[name="self-resonant"], input[name="material-core"], input[name="q-at-freq"]').attr("disabled", true);
     }
 
     // DIODE ONLY OPTIONS
     if (selection === 'diode') {
-      $('.diode-type, .supplier-device').css('display', 'flex');
-      $('input[name="subtype_diode-type"]').attr("required", true);
+      $('.diode-type, .supplier-device-package').css('display', 'flex');
+      $('input[name="diode-type"]').attr("required", true);
+      $('input[name="diode-type"], input[name="supplier-device-package"]').attr("disabled", false);
     } else {
-      $('.diode-type, .supplier-device').css('display', 'none');
-      $('input[name="subtype_diode-type"]').removeAttr("required");
+      $('.diode-type, .supplier-device-package').css('display', 'none');
+      $('input[name="diode-type"]').removeAttr("required");
+      $('input[name="diode-type"], input[name="supplier-device-package"]').attr("disabled", true);
     }
   
     // FERRITE BEAD ONLY OPTIONS
     if (selection === 'ferrite') {
       $('.filter-type').css('display', 'flex');
-      $('input[name="subtype_filter-type"]').attr("required", true);
+      $('input[name="filter-type"]').attr("required", true);
+      $('input[name="filter-type"]').attr("disabled", false);
     } else {
-      $('.diode-type').css('display', 'none');
-      $('input[name="subtype_diode-type"]').removeAttr("required");
+      $('.filter-type').css('display', 'none');
+      $('input[name="filter-type"]').removeAttr("required");
+      $('input[name="filter-type"]').attr("disabled", true);
     }
 
     // RESISTOR ONLY OPTIONS
     if (selection === 'resistor') {
       $('.watts').css('display', 'flex');
-      $('input[name="subtype_watts"]').attr("required", true);
+      $('input[name="watts"]').attr("required", true);
+      $('input[name="watts"]').attr("disabled", false);
     } else {
       $('.watts').css('display', 'none');
-      $('input[name="subtype_watts"]').removeAttr("required");
+      $('input[name="watts"]').removeAttr("required");
+      $('input[name="watts"]').attr("disabled", true);
     }
 
-  // EQUIVALENT ALLOWED - REQUIRED for everything BUT Capactiro
+  // EQUIVALENT ALLOWED - REQUIRED for everything BUT Capacitor
   if (selection !== 'capacitor') {
-    $('input[name="subtype_equivalent-allowed"]').attr("required", true);
+    $('input[name="equivalent-allowed"]').attr("required", true);
   } else {
-    $('input[name="subtype_equivalent-allowed"]').removeAttr("placeholder required");
+    $('input[name="equivalent-allowed"]').removeAttr("placeholder required");
   }
 
   // MOUNTING TYPE
@@ -101,11 +116,13 @@ $('#subtype').on('change', function () {
     case 'switch':
     case 'transistor':
       $('.mounting-type').css('display', 'flex');
-      $('input[name="subtype_mounting-type"]').attr("required", true);
+      $('input[name="mounting-type"]').attr("required", true);
+      $('input[name="mounting-type"]').attr("disabled", false);
       break;
     default:
       $('.mounting-type').css('display', 'none');
-      $('input[name="subtype_mounting-type"]').removeAttr("required");
+      $('input[name="mounting-type"]').removeAttr("required");
+      $('input[name="mounting-type"]').attr("disabled", true);
   }
 
   // PACKAGE
@@ -116,7 +133,8 @@ $('#subtype').on('change', function () {
     case 'resistor':
     case 'transistor':
       $('.package').css('display', 'flex');
-      $('input[name="subtype_package"]').attr("required", true);
+      $('input[name="package"]').attr("required", true);
+      $('input[name="package"]').attr("disabled", false);
       break;
     case 'crystals':
     case 'diode':
@@ -126,11 +144,13 @@ $('#subtype').on('change', function () {
     case 'microphone':
     case 'sensor':
       $('.package').css('display', 'flex');
-      $('input[name="subtype_package"]').removeAttr("placeholder required");
+      $('input[name="package"]').removeAttr("placeholder required");
+      $('input[name="package"]').attr("disabled", false);
       break;
     default:
       $('.package').css('display', 'none');
-      $('input[name="subtype_package"]').removeAttr("required");
+      $('input[name="package"]').removeAttr("required");
+      $('input[name="package"]').attr("disabled", true);
   }
 
   // PACKAGING
@@ -144,9 +164,11 @@ $('#subtype').on('change', function () {
     case 'motor':
     case 'transistor':
       $('.packaging').css('display', 'flex');
+      $('input[name="packaging"]').attr("disabled", false);
       break;
     default:
       $('.packaging').css('display', 'none');
+      $('input[name="packaging"]').attr("disabled", true);
   }
 
   // TOLERANCE
@@ -155,11 +177,13 @@ $('#subtype').on('change', function () {
     case 'inductor':
     case 'resistor':
       $('.tolerance').css('display', 'flex');
-      $('input[name="subtype_tolerance"]').attr("required", true);
+      $('input[name="tolerance"]').attr("required", true);
+      $('input[name="tolerance"]').attr("disabled", false);
       break;
     default: 
       $('.tolerance').css('display', 'none');
-      $('input[name="subtype_tolerance"]').removeAttr("required");
+      $('input[name="tolerance"]').removeAttr("required");
+      $('input[name="tolerance"]').attr("disabled", true);
   }
 
   // TYPE (EE_TYPE)
@@ -168,17 +192,20 @@ $('#subtype').on('change', function () {
     case 'motor':
     case 'transistor':
       $('.ee-type').css('display', 'flex');
-      $('input[name="subtype_ee-type"]').attr("required", true);
+      $('input[name="ee-type"]').attr("required", true);
+      $('input[name="ee-type"]').attr("disabled", false);
       break;
     case 'capacitor':
     case 'crystals':
     case 'elect-misc':
       $('.ee-type').css('display', 'flex');
-      $('input[name="subtype_ee-type"]').removeAttr("placeholder required");
+      $('input[name="ee-type"]').removeAttr("placeholder required");
+      $('input[name="ee-type"]').attr("disabled", false);
       break;
     default: 
       $('.ee-type').css('display', 'none');
       $('input[name="ee-type"]').removeAttr("required");
+      $('input[name="ee-type"]').attr("disabled", true);
   }
 
   // VALUE
@@ -189,11 +216,13 @@ $('#subtype').on('change', function () {
     case 'inductor':
     case 'resistor':
       $('.value').css('display', 'flex');
-      $('input[name="subtype_value"]').attr("required", true);
+      $('input[name="value"]').attr("required", true);
+      $('input[name="value"]').removeAttr("disabled", false);
       break;
     default:
       $('.value').css('display', 'none');
-      $('input[name="subtype_value"]').removeAttr("required", true);
+      $('input[name="value"]').removeAttr("required", true);
+      $('input[name="value"]').attr("disabled", true);
   }
 
 });
