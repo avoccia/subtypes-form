@@ -8,8 +8,11 @@
 }
 
 .header {
+  /* align-items: center; */
   background: #F12741;
   color: white;
+  /* display: flex; */
+  /* justify-content: center; */
   margin: auto;
   padding: 10px;
   text-align: center;
@@ -17,8 +20,9 @@
   width: 100%;
 }
 
-.name {
-  font-size: 1.5rem;
+.logo {
+  width: 500px;
+  height: 100px;
 }
 
 .container {

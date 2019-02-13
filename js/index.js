@@ -4,8 +4,8 @@ $('#subtype').on('change', function () {
 
   // UNIVERSAL OPTIONS
   if (selection !== '') {
-    $('.attr, .digiKey-PN, .ee-description, .equivalent-allowed, .height, .number, .sub-name, .material-group, .state, .version, .organization-name').css('display', 'flex');
-    $('input[name="ee-description"], input[name="height"], input[name="number"], input[name="name"], input[name="extended-material-group"], input[name="state"], input[name="version"], input[name="organization-name"]').attr("required", true);
+    $('.attr, .digiKey-PN, .ee-description, .equivalent-allowed, .height, .number, .sub-name, .material-group').css('display', 'flex');
+    $('input[name="ee-description"], input[name="height"], input[name="number"], input[name="name"], input[name="extended-material-group"]').attr("required", true);
   }
 
   // CAPACITOR ONLY OPTIONS
